@@ -1,0 +1,12 @@
+universe     = vanilla
+getenv       = True
+executable   = Quick_Submit.sh
++JobFlavour  = "workday"
+requirements = (OpSysAndVer =?= "CentOS7")
+RequestCpus  = 4
+
+log          = condor_out/Step3b_$(process).log
+output          = condor_out/Step3b_$(process).out
+error          = condor_out/Step3b_$(process).err
+arguments    =   test_TuneCP5_$(process).txt $(process) /Users/raghumatapita/cernbox/Research/With_NirbhayBhai/Out_RootFile Jets_TuneCP5
+queue 1
